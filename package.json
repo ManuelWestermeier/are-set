@@ -1,6 +1,6 @@
 {
   "name": "are-set",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "a function that returns if a key is in a object",
   "main": "index.js",
   "scripts": {
