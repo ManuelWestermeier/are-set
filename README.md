@@ -3,12 +3,20 @@
 ## usage
 
 ```ts
-import areSet from "are-set"
+import areSet, { areSetAndTheSameType } from "are-set"
 
-const dataYouDontKnow = JSON.parse("{}")
+const dataYouDontKnow = JSON.parse("{\"hello\": true}")
 
 console.log(
-    areSet(dataYouDontKnow, ["key"]) ?
-    "keys are in object" : "keys arent in the object"
+    "keys are in object",
+                           // keys in string array
+    areSet(dataYouDontKnow, ["hello"])
 )
+
+cosnole.log(
+    "are in the object and the same type",
+                                        // [[key, type]]
+    areSetAndTheSameType(dataYouDontKnow, [["hello", "boolean"]])
+)
+
 ```
